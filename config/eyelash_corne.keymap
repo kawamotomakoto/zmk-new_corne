@@ -79,7 +79,7 @@
                                     &trans     &trans     &kp SPACE                    &trans   &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
-        };t
+        };
 
         layer_3 {
             display-name = "Fn";
