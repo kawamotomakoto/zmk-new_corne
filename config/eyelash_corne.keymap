@@ -53,7 +53,7 @@
             bindings = <
 &kp DEL    &kp Q  &kp W  &kp E  &kp R  &kp T                              &kp UP                &kp Y  &kp U  &kp I      &kp O    &kp DEL     &kp DEL
 &td0       &kp A  &kp S  &kp D  &kp F  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &kp J  &kp K      &kp L    &kp P       &kp BSPC
-&kp LCTRL  &kp Z  &kp X  &kp C  &kp V  &kp B       &kp SPACE              &kp DOWN              &kp N  &kp M  &kp COMMA  &kp DOT  &kp MINUS   &kp GRAVE
+&kp LCTRL  &kp Z  &kp X  &kp C  &kp V  &kp B       &kp SPACE              &kp DOWN              &kp N  &kp M  &kp COMMA  &kp DOT  &kp MINUS   &kp TILDE
                              &kp LGUI  &mo 1  &lt 3 SPACE                                              &lt 3 ENTER  &mo 2  &kp RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -62,10 +62,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&none   &none     &none      &none      &none     &none                       &mmv MOVE_UP                     &none   &kp N7   &kp N8  &kp N9   &trans     &trans  
-&none   &kp FSLH  &kp LPAR  &kp MINUS  &kp TILDE  &kp CARET       &mmv MOVE_LEFT  &mkp LCLK &mmv MOVE_RIGHT    &none   &kp N4   &kp N5  &kp N6   &kp N0     &none   
-&none   &none     &none      &none      &none     &none   &trans              &mmv MOVE_DOWN                   &none   &kp N1   &kp N2  &kp N3   &none      &none   
-                             &trans        &trans        &trans                                        &kp COMMA         &kp DEL          &kp BSPC
+&trans   &none     &none      &none      &none     &none                       &mmv MOVE_UP                     &kp BSPC   &kp N7   &kp N8  &kp N9   &trans     &trans  
+&trans  &kp FSLH  &kp DQT  &kp MINUS  &kp COLON  &kp UNDER       &mmv MOVE_LEFT  &mkp LCLK &mmv MOVE_RIGHT    &kp BSPC   &kp N4   &kp N5  &kp N6   &kp N0     &none   
+&trans  &none     &none      &none      &none     &none   &trans              &mmv MOVE_DOWN                   &kp BSPC   &kp N1   &kp N2  &kp N3   &none      &none   
+                             &trans        &trans        &trans                                        &td0         &kp DEL          &kp BSPC
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -73,9 +73,9 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&none   &kp APOS    &kp POUND  &kp DLLR   &kp PRCNT  &kp PRINTSCREEN                    &mmv MOVE_UP                     &none   &none  &none   &none  &none   &none
-&none   &kp AMPS    &kp LBKT   &kp RPAR   &kp QMARK  &kp EXCL            &mmv MOVE_LEFT  &mkp LCLK &mmv MOVE_RIGHT        &none   &none  &none   &none  &none   &none
-&none   &none       &none      &none      &kp PLUS   &none     &trans                   &mmv MOVE_DOWN                   &none   &none  &none   &none  &none   &none   
+&trans   &kp APOS    &kp POUND  &kp DLLR   &kp PRCNT  &kp PRINTSCREEN                    &mmv MOVE_UP                     &none   &none  &none   &none  &none   &none
+&trans   &kp AMPS    &kp ASTRK   &kp LPAR   &kp QMARK  &kp EXCL            &mmv MOVE_LEFT  &mkp LCLK &mmv MOVE_RIGHT        &none   &none  &none   &none  &none   &none
+&trans  &none       &none      &none      &kp PLUS   &none     &trans                   &mmv MOVE_DOWN                   &none   &none  &none   &none  &none   &none   
                                     &kp BSPC     &kp DEL     &kp SPACE                                 &trans   &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
